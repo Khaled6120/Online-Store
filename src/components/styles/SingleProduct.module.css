@@ -1,0 +1,141 @@
+
+.continer{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 90%;
+	margin: 30px auto;
+	flex-wrap: wrap;
+  }
+  .card {
+	width: 300px;
+	height: 100%;
+	padding: .8em;
+	margin: 20px;
+	background: #f5f5f543;
+	position: relative;
+	overflow: visible;
+	border-top: 10px solid #4D3399;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+   }
+   
+   .card_img {
+	height: 40%;
+	width: 100%;
+	z-index: 5;
+
+	transition: .3s ease;
+   }
+   img{
+	
+	background-color: rgba(0, 0, 0, 0);
+
+   }
+   .textCategory{
+	background-color: rgba(128, 128, 128, 0.71);
+	border: 4px solid #f5f5f5;
+	width: 50%;
+	padding: 7px 0px;
+	margin: auto  ;
+	border-radius: 50px;
+	transform: translateY(-55px);
+	color: whitesmoke;
+	text-align: center;
+	font-size: small;
+	z-index: 1;
+
+   }
+   .cardInfo {
+	padding-top: 10%;
+   }
+   
+
+   .cardFooter {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 10px;
+	border-top: 1px solid #ddd;
+   }
+   
+   /*Text*/
+   .textTitle {
+	font-weight: 900;
+	font-size: 1.2em;
+	line-height: 1.5;
+   }
+   
+   .textBody {
+	font-size: .9em;
+	padding-bottom: 10px;
+   }
+   
+   .button {
+	position: relative;
+	overflow: hidden;
+	outline: none;
+	cursor: pointer;
+	border-radius: 50px;
+	background-color: hsl(255deg 50% 40%);
+	border: solid 4px hsl(50deg 100% 50%);
+	font-family: inherit;
+	width: 80%;
+	text-align: center;
+	margin: 0 auto;
+   }
+   
+   .defaultBtn,.hoverBtn {
+	background-color: hsl(255deg 50% 40%);
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	padding: 15px 20px;
+	border-radius: 50px;
+	font-size: 17px;
+	font-weight: 500;
+	text-transform: uppercase;
+	transition: all .3s ease;
+   }
+   
+   .hoverBtn {
+	position: absolute;
+	inset: 0;
+	background-color: hsl(255deg 50% 49%);
+	transform: translate(0%,100%);
+	
+   }
+   
+   .defaultBtn span {
+	color: hsl(0, 0%, 100%);
+
+   }
+   
+   .hoverBtn span {
+	color: hsl(50deg 100% 50%);
+   }
+   
+   .button:hover .defaultBtn {
+	transform: translate(0%,-100%);
+   }
+   
+   .button:hover .hoverBtn {
+	transform: translate(0%,0%);
+   }
+   
+   /*Hover*/
+   .card_img:hover {
+	transform: translateY(-25%);
+	box-shadow: rgba(226, 196, 63, 0.25) 0px 13px 47px -5px, rgba(180, 71, 71, 0.3) 0px 8px 16px -8px;
+   }
+   
+ 
+   .corusel_img{
+	height: 500px;
+	width: 100%;
+	object-fit: cover;
+   }

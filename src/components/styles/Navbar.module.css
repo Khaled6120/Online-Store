@@ -1,0 +1,35 @@
+.navbar{
+    height: 80px;
+    background-color: #113855;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4rem;
+  }
+  .navbar a{
+    text-decoration: none;
+    color:white
+  }
+  .navbar h2{
+    font-size: 40px;
+  }
+  .navBag{
+    display: flex;
+    align-items: center;
+  }
+  .navBag svg{
+    font-size: 26px;
+  }
+  .bagQuantity{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25px;
+    width: 25px;
+    background: gold;
+    border-radius: 100%;
+    font-size: 14px;
+    font-weight:bold;
+    color:black;
+    margin-left: 5px;
+  }
