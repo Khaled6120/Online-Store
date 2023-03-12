@@ -10,7 +10,7 @@ export const productsFetch = createAsyncThunk(
   "products/productsFetch",
   async (id = null, { rejectWithValue }) => {
     try {
-      const response = await axios.get("https://fakestoreapi.com/products/");
+      const response = await axios.get("https://fakestoreapi.com/products");
       //for showing the loader -->development purpose
       await pause(2500)
       //for showing the loader -->development purpose
@@ -20,8 +20,11 @@ export const productsFetch = createAsyncThunk(
     }
   }
 
+  
+
 
 );
+
 //for showing the loader -->development purpose
 const pause = duration =>{
     return new Promise((resolve) =>{
@@ -46,5 +49,7 @@ const productsSlice = createSlice({
     },
   },
 });
+
+
 
 export default productsSlice.reducer;

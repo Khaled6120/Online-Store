@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import SingleProduct from "./SingleProduct";
+import Categories from "./Categories";
 import styles from "./styles/SingleProduct.module.css";
 import MainCarousels from "./MainCarousels";
 import style from "./styles/skeleton.module.css";
@@ -11,6 +12,7 @@ function Home() {
   return (
     <>
       <MainCarousels />
+      <Categories />
       {status === "loading" && (
         <div className={style.body}>
           <div class={style.loader}>

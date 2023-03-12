@@ -1,35 +1,85 @@
-.navbar{
-    height: 80px;
-    background-color: #113855;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 4rem;
+.navbar {
+  height: 80px;
+  background-color: #5d3ebbe8;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4rem;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+.navbar a {
+  text-decoration: none;
+  color: white;
+}
+.navbar h2 {
+  font-size: 40px;
+  transition: 1s;
+}
+.navbar h2:hover {
+  transition: 1s;
+
+  color: black;
+}
+.navbar h2 > span {
+  color: gold;
+}
+.navBag {
+  display: flex;
+  align-items: center;
+  color: whitesmoke;
+
+  transition: 0.5s;
+}
+.navBag:hover .icon {
+  transition: 0.5s ease-in-out;
+  color: whitesmoke;
+  transform: translateX(75px);
+  color: gold;
+  background-color: #6A4EC0;
+
+}
+.navBag:hover .bagQuantity {
+  transition: 0.5s ease-in-out;
+  background: #6A4EC0;
+  color: #6A4EC0;
+
+}
+.bagQuantity {
+  transition: 0.8s ease-in-out;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 30px;
+  background: gold;
+  border-radius: 100%;
+  font-size: 14px;
+  font-weight: bold;
+  color: black;
+  margin-left: 5px;
+  border-left: none;
+  border-right: none;
+
+
+}
+.icon{
+  font-size: 40px;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+  .navbar {
+
+    padding: 0 1.5rem;
+ 
   }
-  .navbar a{
-    text-decoration: none;
-    color:white
+  .navbar h2 {
+    font-size: 30px;
+    transition: 1s;
   }
-  .navbar h2{
-    font-size: 40px;
-  }
-  .navBag{
-    display: flex;
-    align-items: center;
-  }
-  .navBag svg{
-    font-size: 26px;
-  }
-  .bagQuantity{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 25px;
-    width: 25px;
-    background: gold;
-    border-radius: 100%;
-    font-size: 14px;
-    font-weight:bold;
-    color:black;
-    margin-left: 5px;
-  }
+}

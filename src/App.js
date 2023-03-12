@@ -12,6 +12,7 @@ import "react-toastify/dist/ReactToastify.css";
 //bootstrap
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
+import Checkout from "./components/Checkout";
 function App() {
   return (
     <div className="App">
@@ -22,6 +23,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/not-found" element={<NotFound />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/checkout" element={<Checkout />} />
           <Route path="/*" element={<Navigate to="/not-found" />} />
         </Routes>
       </BrowserRouter>

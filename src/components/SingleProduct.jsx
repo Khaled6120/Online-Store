@@ -26,7 +26,7 @@ function SingleProduct({ data }) {
             <span style={{ margin: "auto" }}>$ {data.price}</span>
           </div>
           <div className={styles.hoverBtn}>
-            <GiShoppingCart  />
+            <GiShoppingCart className={styles.icon} />
             <span>Shop Now</span>
           </div>
         </button>

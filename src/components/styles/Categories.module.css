@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Sono:wght@300&display=swap');
+.container{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 5px 15px;
+   width: fit-content;
+   margin: 20px auto;
+   gap: 10px;
+}
+.container .category{
+    gap: 5px;
+    margin: 0px 5px;
+    background-color: gold;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: "sono";
+    color: #6a4ec0;
+    font-weight: bold;
+    border: #6a4ec0 dashed 2px ;
+}
+.container .category:hover{
+   transform: translateY(-7px);
+   cursor: pointer;
+   transition:0.8s;
+   color: whitesmoke;
+   background-color: #6a4ec0;
+   border: whitesmoke dashed 2px ;
+}

@@ -3,7 +3,7 @@ import styles from "./styles/Cart.module.css"
 function DeleteBtn({click, item}) {
   return (
     <div class={styles.button_delete} onClick={()=>click(item)}>
-      <span class={styles.text}>Delete</span>
+      <span class={styles.text}>Remove</span>
       <span class={styles.icon}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
