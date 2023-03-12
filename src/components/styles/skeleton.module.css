@@ -1,53 +1,51 @@
 
-  
-  .cards {
-    display: flex;
+.body{
+  height: 100vh;
+  display:absolute;
+  left: 0;
+  top: 0;
+}
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+}
+
+.box {
+  width: 20px;
+  height: 20px;
+  margin: 0 8px;
+  border-radius: 50%;
+  animation: jump_4123 1s ease-in-out infinite;
+}
+
+.box:nth-child(1) {
+  background-color: #5E3EBB;
+  animation-delay: 0.2s;
+}
+
+.box:nth-child(2) {
+  background-color: #FFC700;
+  animation-delay: 0.4s;
+}
+
+.box:nth-child(3) {
+  background-color: #5E3EBB;
+  animation-delay: 0.6s;
+}
+
+.box:nth-child(4) {
+  background-color: #FFC700;
+  animation-delay: 0.8s;
+}
+
+@keyframes jump_4123 {
+  0%, 100% {
+    transform: translateY(0);
   }
-  
-  .card {
-    margin: 10px;
-    width: 300px;
-    background: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+
+  50% {
+    transform: translateY(-30px);
   }
-  
-  .card .image img {
-    max-width: 100%;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-  }
-  
-  .card .content {
-    padding: 20px 30px;
-  }
-  
-  .card.is_loading .image,
-  .card.is_loading h2,
-  .card.is_loading p {
-    background: #eee;
-    background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
-    border-radius: 5px;
-    background-size: 200% 100%;
-    animation: 1.5s shine linear infinite;
-  }
-  
-  .card.is_loading .image {
-    height: 200px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-  
-  .card.is_loading h2 {
-    height: 30px;
-  }
-  
-  .card.is_loading p {
-    height: 70px;
-  }
-  
-  @keyframes shine {
-    to {
-      background-position-x: -200%;
-    }
-  }
+}

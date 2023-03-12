@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import SingleProduct from "./SingleProduct";
 import styles from "./styles/SingleProduct.module.css";
 import MainCarousels from "./MainCarousels";
-import style from './styles/skeleton.module.css'
+import style from "./styles/skeleton.module.css";
 function Home() {
   const { items, status } = useSelector((state) => state.products);
 
@@ -12,12 +12,13 @@ function Home() {
     <>
       <MainCarousels />
       {status === "loading" && (
-        <div class={`${style.card} ${style.is_loading}`}>
-          <div class={style.image}></div>
-          <div class={style.content}>
-            <h2></h2>
-            <p></p>
-          </div>
+        <div className={style.body}>
+          <div class={style.loader}>
+          <div class={style.box}></div>
+          <div class={style.box}></div>
+          <div class={style.box}></div>
+          <div class={style.box}></div>
+        </div>
         </div>
       )}
       {items && <div className={styles.continer}>{renderedItems}</div>}

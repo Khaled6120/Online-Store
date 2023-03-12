@@ -2,7 +2,33 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  
+}
+body{
+  background-color: #11375513 !important
+
+}
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
 }
 
-/*Navbar*/
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #FFD500;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #FFD500;
+}
 

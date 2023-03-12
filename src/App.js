@@ -1,16 +1,23 @@
 import "./App.css";
-import { BrowserRouter, Route, Routes ,Navigate } from "react-router-dom";
+//react routing
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
+//component
 import Navbar from "./components/Navbar";
 import Cart from "./components/Cart";
 import Home from "./components/Home";
 import NotFound from "./components/NotFound";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min';
+//toastify
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+//bootstrap
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min";
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Navbar />
+        <ToastContainer />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/not-found" element={<NotFound />} />

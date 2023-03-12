@@ -1,6 +1,15 @@
 import styles from './styles/SingleProduct.module.css';
 import { GiShoppingCart } from "react-icons/gi";
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../features/cartSlice';
+import {useNavigate} from 'react-router'
 function SingleProduct({ data }) {
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
+  const handleAddToCart = product =>{
+    dispatch(addToCart(product))
+    navigate('/cart')
+  }
   return (
     <div className={styles.card}>
       <div className={styles.card_img}>
@@ -12,7 +21,7 @@ function SingleProduct({ data }) {
         <p className={styles.textBody}>{data.description.slice(0, 120)}...</p>
       </div>
       <div class={styles.cardFooter}>
-        <button className={styles.button}>
+        <button onClick={()=>handleAddToCart(data)} className={styles.button}>
           <div className={styles.defaultBtn}>
             <span style={{ margin: "auto" }}>$ {data.price}</span>
           </div>
