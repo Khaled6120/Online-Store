@@ -19,7 +19,8 @@ The project is a good practice to play with real data and layout them in a moder
 7. react-toastify
 8. React-Router V6
 9. React-icons
-10. Fake Store API ('https://fakestoreapi.com/')
+10. Localstorage 
+11. Fake Store API ('https://fakestoreapi.com/')
 </br>
  <div align="start">
    <img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-original.svg" title="HTML5" alt="HTML" width="40" height="40"/>&nbsp;
