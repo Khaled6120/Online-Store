@@ -37,6 +37,8 @@ The project is a good practice to play with real data and layout them in a moder
 
 Once you have the project in your machine, please run these commands
 ### `npm install`
+### `npm run start`
+
 
 ## Live Demo & Responsivness
 
