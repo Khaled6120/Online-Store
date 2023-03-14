@@ -6,6 +6,8 @@ const initialState = {
     : [],
   cartTotalQuantity: 0,
   cartTotalAmount: 0,
+  promoCode: 5,
+  codeCorrect: false
 };
 
 const cartSlice = createSlice({
@@ -44,6 +46,8 @@ const cartSlice = createSlice({
     },
     //reducer 3
     removeAll(state, action) {
+      state.codeCorrect = false
+
       state.cartItems = [];
       localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
       toast.error("All items have been removed", {
@@ -86,12 +90,23 @@ const cartSlice = createSlice({
         quantity:0
       })
       state.cartTotalQuantity = quantity
-      state.cartTotalAmount = price
+      if(state.codeCorrect){ 
+        state.cartTotalAmount = price - state.promoCode
+
+      }else
+      state.cartTotalAmount = price 
+
+    },
+
+    //reducer 6
+    discount(state,action){
+      state.codeCorrect = true
+      state.cartTotalAmount -= state.promoCode
     }
   },
 });
 
-export const { addToCart, removeFromCart, removeAll, decreaseCart, TotalPriceAndQuantity } =
+export const { addToCart, removeFromCart, removeAll, decreaseCart, TotalPriceAndQuantity,discount } =
   cartSlice.actions;
 
 export default cartSlice.reducer;

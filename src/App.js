@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import Cart from "./components/Cart";
 import Home from "./components/Home";
 import NotFound from "./components/NotFound";
+import ItemDetails from "./components/ItemDetails";
 //toastify
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -24,6 +25,7 @@ function App() {
           <Route path="/not-found" element={<NotFound />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<Checkout />} />
+          <Route path="/item/:id" element={<ItemDetails />} />
           <Route path="/*" element={<Navigate to="/not-found" />} />
         </Routes>
       </BrowserRouter>

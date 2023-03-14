@@ -2,9 +2,9 @@ import React from "react";
 import styles from "./styles/Cart.module.css"
 function DeleteBtn({click, item}) {
   return (
-    <div class={styles.button_delete} onClick={()=>click(item)}>
-      <span class={styles.text}>Remove</span>
-      <span class={styles.icon}>
+    <div className={styles.button_delete} onClick={()=>click(item)}>
+      <span className={styles.text}>Remove</span>
+      <span className={styles.icon}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"

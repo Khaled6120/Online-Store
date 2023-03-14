@@ -2,7 +2,7 @@ import React from "react";
 import styles from './styles/CartLoader.module.css'
 function CartLoader() {
   return (
-    <div class="preloader">
+    <div className="preloader">
       <svg
         className={styles.cart}
         role="img"

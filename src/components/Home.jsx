@@ -8,18 +8,18 @@ import style from "./styles/skeleton.module.css";
 function Home() {
   const { items, status } = useSelector((state) => state.products);
 
-  const renderedItems = items.map((item) => <SingleProduct data={item} />);
+  const renderedItems = items.map((item,index) => <SingleProduct data={item} key={item.id} />);
   return (
     <>
       <MainCarousels />
       <Categories />
       {status === "loading" && (
         <div className={style.body}>
-          <div class={style.loader}>
-          <div class={style.box}></div>
-          <div class={style.box}></div>
-          <div class={style.box}></div>
-          <div class={style.box}></div>
+          <div className={style.loader}>
+          <div className={style.box}></div>
+          <div className={style.box}></div>
+          <div className={style.box}></div>
+          <div className={style.box}></div>
         </div>
         </div>
       )}
