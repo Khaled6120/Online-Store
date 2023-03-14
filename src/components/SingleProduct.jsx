@@ -26,7 +26,6 @@ function SingleProduct({ data , navigation }) {
       <div className={styles.cardInfo}>
         <p className={styles.textCategory}>{data.category}</p>
         <p onClick={()=>handleShowItem(data)} className={styles.textTitle}>{data.title.slice(0, 40)} </p>
-        <p className={styles.textBody}>{data.description.slice(0, 120)}...</p>
       </div>
       <div className={styles.cardFooter}>
         <button onClick={()=>handleAddToCart(data)} className={styles.button}>

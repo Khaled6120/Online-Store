@@ -23,7 +23,7 @@
     font-size: medium;
 }
 .title{
-    color: rgb(65, 65, 65);
+    color: rgb(99, 99, 99);
     font-family: Arial, sans-serif;
 }
 .rate{
@@ -84,6 +84,11 @@
         flex-direction: column-reverse;
         margin: 40px 15px;
     }
+    .title{
+        font-size: large;
+        font-weight: 600;
+        color: rgb(99, 99, 99);
+    }
     .container .detail{
         width: 80%;
         margin: auto;
@@ -98,5 +103,8 @@
     .subContainer{
         display: flex;
         gap: 15px;
+    }
+    .buttons button {
+        margin-bottom: 10px;
     }
    }
