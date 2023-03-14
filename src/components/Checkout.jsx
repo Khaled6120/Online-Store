@@ -63,7 +63,7 @@ function Checkout() {
           <input
             ref={cardNumberInput}
             type="number"
-            placeholder="0000 0000 0000 0000"
+            placeholder="0000 0000  0000 0000"
             data-mask="0000 0000 0000 0000"
           />
         </div>
