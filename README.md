@@ -43,6 +43,8 @@ Once you have the project in your machine, please run these commands
 
 ## Live Demo & Responsivness
 
-Live :
+Live : ("https://e-commerce-project-dusky.vercel.app/")
 
-**Responsiveness :**
+**Responsiveness :
+![image](https://user-images.githubusercontent.com/86200305/224867114-94557b5b-4cd9-47b1-b010-a83a8d189623.png)
+
