@@ -4,7 +4,7 @@ import styles from "./styles/Checkout.module.css";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
-import { removeAll } from "../features/cartSlice";
+import { removeAll } from "../redux/features/cart";
 function Checkout() {
   const { cartTotalAmount } = useSelector((state) => state.cart);
   const navigate = useNavigate();

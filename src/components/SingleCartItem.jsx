@@ -1,18 +1,17 @@
-import styles from "./styles/Cart.module.css";
+import styles from "../pages/CartPage/Cart.module.css";
 import { AiOutlineArrowLeft,AiOutlineRight } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import {
   removeFromCart,
-  removeAll,
   decreaseCart,
   addToCart,
   discount
-} from "../features/cartSlice";
+} from "../redux/features/cart";
 import DeleteBtn from "./DeleteBtn";
 import { BsCartPlus, BsCartDash } from "react-icons/bs";
 import { useRef,useEffect } from "react";
-import { openModal } from "../features/modalSlice";
+import { openModal } from "../redux/features/modal";
 import Modal from "./Modal";
 
 function SingleCartItem({ cart }) {

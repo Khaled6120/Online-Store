@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
-import { removeAll } from '../features/cartSlice';
-import { closeModal } from '../features/modalSlice';
+import { removeAll } from '../redux/features/cart';
+import { closeModal } from '../redux/features/modal';
 import styles from "./styles/Modal.module.css"
 const Modal = () => {
   const dispatch = useDispatch();

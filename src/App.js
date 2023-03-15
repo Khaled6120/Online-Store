@@ -1,25 +1,18 @@
 import "./App.css";
-//react routing
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
-//component
 import Navbar from "./components/Navbar";
-import Cart from "./components/Cart";
+import Cart from "./pages/CartPage";
 import Home from "./components/Home";
 import NotFound from "./components/NotFound";
 import ItemDetails from "./components/ItemDetails";
-//toastify
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-//bootstrap
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min";
 import Checkout from "./components/Checkout";
+import { ToastContainer } from "react-toastify";
+
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Navbar />
-        <ToastContainer />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/not-found" element={<NotFound />} />
@@ -28,6 +21,7 @@ function App() {
           <Route path="/item/:id" element={<ItemDetails />} />
           <Route path="/*" element={<Navigate to="/not-found" />} />
         </Routes>
+        <ToastContainer />
       </BrowserRouter>
     </div>
   );
