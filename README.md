@@ -37,6 +37,7 @@ The project is a good practice to play with real data and layout them in a moder
 ## Cloning the project
 
 Once you have the project in your machine, please run these commands
+### `git clone https://github.com/Khaled6120/E-commerce-project.git`
 ### `npm install`
 ### `npm run start`
 
