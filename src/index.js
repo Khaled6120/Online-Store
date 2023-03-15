@@ -7,11 +7,13 @@ import { Provider } from "react-redux";
 
 import productsReducer, {productsFetch} from "./features/productSlice"
 import cartReducer, { TotalPriceAndQuantity } from "./features/cartSlice";
+import modalReducer from './features/modalSlice';
 
 const store = configureStore({
   reducer: {
     products: productsReducer,
-    cart:cartReducer
+    cart:cartReducer,
+    modal: modalReducer
   },
 });
 store.dispatch(productsFetch())

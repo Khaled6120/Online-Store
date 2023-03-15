@@ -1,0 +1,56 @@
+.modal_container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  .modal {
+    background: var(--clr-white);
+    width: 80vw;
+    max-width: 400px;
+    padding: 2rem 1rem;
+    text-align: center;
+    background: whitesmoke;
+    border-radius: 20px;
+
+  }
+  .modal h4 {
+    margin-bottom: 0;
+    line-height: 1.3;
+    color: rgb(75, 75, 75);
+    font-weight: 500;
+    font-size: 1.4rem;
+  }
+  .modal .clear_btn,
+  .modal .confirm_btn {
+    margin-top: 1rem;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    color: whitesmoke;
+    width: 40%;
+  }
+  .modal .clear_btn:hover,
+  .modal .confirm_btn:hover {
+  opacity: 90%;
+  }
+  .clear_btn{
+    background-color: rgba(255, 0, 0, 0.729);
+
+  }
+  .confirm_btn{
+    background: #5B3EB0;
+  }
+  .btn_container {
+    display: flex;
+    justify-content: space-around;
+  }
+  

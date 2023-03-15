@@ -1,7 +1,7 @@
 import styles from "./styles/Cart.module.css";
 import { AiOutlineArrowLeft,AiOutlineRight } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import {
   removeFromCart,
   removeAll,
@@ -12,9 +12,12 @@ import {
 import DeleteBtn from "./DeleteBtn";
 import { BsCartPlus, BsCartDash } from "react-icons/bs";
 import { useRef,useEffect } from "react";
+import { openModal } from "../features/modalSlice";
+import Modal from "./Modal";
 
 function SingleCartItem({ cart }) {
   const dispatch = useDispatch();
+  const {isOpen} = useSelector(state =>state.modal)
 
   const discountInput = useRef()
 
@@ -34,7 +37,7 @@ function SingleCartItem({ cart }) {
     dispatch(removeFromCart(item));
   };
   const deleteAll = () => {
-    dispatch(removeAll());
+    dispatch(openModal())
   };
   const handleDecreaseCart = (item) => {
     dispatch(decreaseCart(item));
@@ -44,7 +47,9 @@ function SingleCartItem({ cart }) {
   };
   return (
     <div>
-      <div className={styles.titles}>
+      {isOpen ? <Modal /> : (
+        <div>
+          <div className={styles.titles}>
         <h3 className={styles.produc_title}>Product</h3>
         <h3 className={styles.price}>Price</h3>
         <h3 className={styles.quantity}>Quantitiy</h3>
@@ -103,6 +108,9 @@ function SingleCartItem({ cart }) {
           </div>
         </div>
       </div>
+        </div>
+      )}
+      
     </div>
   );
 }
