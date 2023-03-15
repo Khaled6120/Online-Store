@@ -7,7 +7,7 @@ import {
   FcBusinesswoman,
 } from "react-icons/fc";
 import { HiSparkles } from "react-icons/hi";
-import {productsFetch} from "../features/productSlice"
+import {productsFetch} from "../redux/features/product"
 import {FcShop} from "react-icons/fc"
 
 function Categories() {

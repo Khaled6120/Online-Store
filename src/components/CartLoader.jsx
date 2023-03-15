@@ -1,6 +1,6 @@
 import React from "react";
 import styles from './styles/CartLoader.module.css'
-function CartLoader() {
+export function CartLoader() {
   return (
     <div className="preloader">
       <svg
@@ -14,9 +14,9 @@ function CartLoader() {
       >
         <g
           fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="8"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="8"
         >
           <g className={styles.cart__track} stroke="hsla(0,10%,10%,0.1)">
             <polyline points="4,4 21,4 26,22 124,22 112,64 35,64 39,80 106,80" />
@@ -27,8 +27,8 @@ function CartLoader() {
             <polyline
               className={styles.cart__top}
               points="4,4 21,4 26,22 124,22 112,64 35,64 39,80 106,80"
-              stroke-dasharray="338 338"
-              stroke-dashoffset="-338"
+              strokeDasharray="338 338"
+              strokeDashoffset="-338"
             />
             <g className={styles.cart__wheel1} transform="rotate(-90,43,111)">
               <circle
@@ -36,8 +36,8 @@ function CartLoader() {
                 cx="43"
                 cy="111"
                 r="13"
-                stroke-dasharray="81.68 81.68"
-                stroke-dashoffset="81.68"
+                strokeDasharray="81.68 81.68"
+                strokeDashoffset="81.68"
               />
             </g>
             <g className={styles.cart__wheel2} transform="rotate(90,102,111)">
@@ -46,8 +46,8 @@ function CartLoader() {
                 cx="102"
                 cy="111"
                 r="13"
-                stroke-dasharray="81.68 81.68"
-                stroke-dashoffset="81.68"
+                strokeDasharray="81.68 81.68"
+                strokeDashoffset="81.68"
               />
             </g>
           </g>
@@ -59,5 +59,4 @@ function CartLoader() {
     </div>
   );
 }
-
-export default CartLoader;
+  

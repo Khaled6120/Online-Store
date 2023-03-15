@@ -1,12 +1,13 @@
 import styles from './styles/SingleProduct.module.css';
 import { GiShoppingCart } from "react-icons/gi";
 import { useDispatch } from 'react-redux';
-import { addToCart } from '../features/cartSlice';
+import { addToCart } from '../redux/features/cart';
 import {useNavigate} from 'react-router'
 function SingleProduct({ data , navigation }) {
   const dispatch = useDispatch()
   const navigate = useNavigate()
-  const handleAddToCart = product =>{
+  const handleAddToCart = product => {
+    console.log(product)
     dispatch(addToCart(product))
     navigate('/cart')
   }

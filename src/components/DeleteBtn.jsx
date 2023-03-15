@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./styles/Cart.module.css"
+import styles from "../pages/CartPage/Cart.module.css"
 function DeleteBtn({click, item}) {
   return (
     <div className={styles.button_delete} onClick={()=>click(item)}>

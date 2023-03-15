@@ -25,7 +25,7 @@ const cartSlice = createSlice({
         state.cartItems.push(tempProduct);
         toast.success("Added a new product to cart", {
           position: "top-center",
-          autoClose: 4000,
+          autoClose: 4000
         });
       }
 
@@ -41,18 +41,18 @@ const cartSlice = createSlice({
       localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
       toast.error("Removed from cart", {
         position: "bottom-left",
-        autoClose: 4000,
+        autoClose: 4000
       });
     },
     //reducer 3
     removeAll(state, action) {
-      state.codeCorrect = false
+      state.codeCorrect = false;
 
       state.cartItems = [];
       localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
       toast.error("All items have been removed", {
         position: "bottom-left",
-        autoClose: 4000,
+        autoClose: 4000
       });
     },
     //reducer 4
@@ -71,42 +71,47 @@ const cartSlice = createSlice({
         state.cartItems = newlyCartItems;
         toast.error("Removed from cart", {
           position: "bottom-left",
-          autoClose: 4000,
+          autoClose: 4000
         });
         localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
       }
     },
     //reducer 5
-    TotalPriceAndQuantity(state,action){
-      let {price, quantity} = state.cartItems.reduce((acc, item) =>{
-        const total =item.cardQuantity * item.price
-        acc.price += total
-        acc.quantity += item.cardQuantity
+    TotalPriceAndQuantity(state, action) {
+      let { price, quantity } = state.cartItems.reduce(
+        (acc, item) => {
+          const total = item.cardQuantity * item.price;
+          acc.price += total;
+          acc.quantity += item.cardQuantity;
 
-        return acc
-        
-      },{
-        price:0,
-        quantity:0
-      })
-      state.cartTotalQuantity = quantity
-      if(state.codeCorrect){ 
-        state.cartTotalAmount = price - state.promoCode
-
-      }else
-      state.cartTotalAmount = price 
-
+          return acc;
+        },
+        {
+          price: 0,
+          quantity: 0
+        }
+      );
+      state.cartTotalQuantity = quantity;
+      if (state.codeCorrect) {
+        state.cartTotalAmount = price - state.promoCode;
+      } else state.cartTotalAmount = price;
     },
 
     //reducer 6
-    discount(state,action){
-      state.codeCorrect = true
-      state.cartTotalAmount -= state.promoCode
+    discount(state, action) {
+      state.codeCorrect = true;
+      state.cartTotalAmount -= state.promoCode;
     }
-  },
+  }
 });
 
-export const { addToCart, removeFromCart, removeAll, decreaseCart, TotalPriceAndQuantity,discount } =
-  cartSlice.actions;
+export const {
+  addToCart,
+  removeFromCart,
+  removeAll,
+  decreaseCart,
+  TotalPriceAndQuantity,
+  discount
+} = cartSlice.actions;
 
 export default cartSlice.reducer;
