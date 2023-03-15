@@ -1,8 +1,8 @@
-import React from "react";
 import { useDispatch } from "react-redux";
 import { useLocation, useNavigate } from "react-router-dom";
-import { addToCart } from "../redux/features/cart";
-import style from "./styles/ItemDetails.module.css";
+import { addToCart } from "../../redux/features/cart";
+import style from "./ItemDetails.module.css";
+
 function ItemDetails() {
   const { state } = useLocation();
   const navigate = useNavigate()

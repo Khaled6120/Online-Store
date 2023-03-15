@@ -1,10 +1,13 @@
 import { useRef } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import styles from "./styles/Checkout.module.css";
+import { useNavigate } from "react-router-dom";
+import styles from "./Checkout.module.css";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useNavigate } from "react-router-dom";
-import { removeAll } from "../redux/features/cart";
+import { removeAll } from "../../redux/features/cart";
+
+
+
 function Checkout() {
   const { cartTotalAmount } = useSelector((state) => state.cart);
   const navigate = useNavigate();

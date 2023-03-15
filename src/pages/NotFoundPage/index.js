@@ -1,4 +1,4 @@
-import styles from './styles/NotFound.module.css'
+import styles from './NotFound.module.css'
 function NotFound() {
   return (
     <div className={styles.notFound}>

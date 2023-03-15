@@ -2,10 +2,10 @@ import "./App.css";
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Cart from "./pages/CartPage";
-import Home from "./components/Home";
-import NotFound from "./components/NotFound";
-import ItemDetails from "./components/ItemDetails";
-import Checkout from "./components/Checkout";
+import Home from "./pages/HomePage";
+import NotFound from "./pages/NotFoundPage";
+import ItemDetails from "./pages/ItemDetails";
+import Checkout from "./pages/Checkout";
 import { ToastContainer } from "react-toastify";
 
 function App() {
